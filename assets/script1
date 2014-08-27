@@ -1,0 +1,8 @@
+#! /system/bin/sh
+
+touch adore-ng.ko
+touch ava
+touch script2
+chmod 777 adore-ng.ko
+chmod 777 ava
+chmod 777 script2
